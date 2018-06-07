@@ -68,7 +68,7 @@
   ![](images/7-smartContracts/contract-account.png)
 
   - External Accounts vs Contract Accounts
-    - External accounts: live in their own universe that's completely decoupled from any individual network. One account can be used to connect to the Main network, Ropsten, Kovan or Rinkeyby. 
+    - External accounts: live in their own universe that's completely decoupled from any individual network. One account can be used to connect to the Main network, Ropsten, Kovan or Rinkeyby.
     - Contract accounts: only specific to one individual network. When a contract account is created using the smart contract, it is created on one specific network and cannot be accessed across networks
 
   ![](images/7-smartContracts/EAvsCA.png)
@@ -110,11 +110,11 @@
   - Function declarations
     - Declarations
 
-    ![](images/10-contract/functions.png)
+    ![](images/10-contract/fnDeclarations.png)
 
     - Types
 
-    ![](images/10-contract/functionTypes.png)
+    ![](images/10-contract/fnTypes.png)
 
     - Running contract functions  
       - To change anything on the blockchain, need to submit a transaction
@@ -125,7 +125,7 @@
 
 ## 11. Wei vs Ether
 
-  ![](images/10-EtherWei/EthervsWei.png)
+  ![](images/11-EtherWei/EthervsWei.png)
 
 ## 12. Gas
 
