@@ -89,9 +89,23 @@
 
   ![](images/8-solidity/solidity-basicTypes.png)
 
-  - Integer Ranges
+  - Integer ranges
 
   ![](images/8-solidity/solidity-integerRanges.png)
+
+  - Reference types
+
+  ![](images/8-solidity/solidity-refTypes.png)
+
+    - Arrays (e.g. uint[] public myArray): the function that gets generated for an array in solidity does not return the entire array. It accepts one argument and that's the index of the element that we want to retrieve from the array. To retrieve an entire array:
+
+    ```solidity
+    address[] public users; 
+
+    function getUsers() public view returns (address[]) {
+      return users;
+    }
+    ```
 
   - Message ('msg') global variable
     - Available both when a transaction is sent and with a call
