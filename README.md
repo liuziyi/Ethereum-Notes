@@ -85,14 +85,22 @@
 
   ![](images/8-solidity/solidity1.png)
 
-  - The byte code is the actual byte code that will be deployed to the ethereum network.
-  - The ABI is what enables apps to interact with the deployed smart contracts.
+  - Basic solidity types
 
   ![](images/8-solidity/solidity2.png)
 
-  - The JS code has no ability to interact with the byte code that has been deployed to the ethereum network so need the ABI to do the translation.
+  - Integer Ranges
 
   ![](images/8-solidity/solidity3.png)
+
+  - The byte code is the actual byte code that will be deployed to the ethereum network.
+  - The ABI is what enables apps to interact with the deployed smart contracts.
+
+  ![](images/8-solidity/solidity4.png)
+
+  - The JS code has no ability to interact with the byte code that has been deployed to the ethereum network so need the ABI to do the translation.
+
+  ![](images/8-solidity/solidity5.png)
 
 ## 9. Remix
   - remix.ethereum.org
