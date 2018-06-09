@@ -83,24 +83,35 @@
 
 ## 8. Solidity
 
-  ![](images/8-solidity/solidity1.png)
+  ![](images/8-solidity/solidity.png)
 
   - Basic solidity types
 
-  ![](images/8-solidity/solidity2.png)
+  ![](images/8-solidity/solidity-basicTypes.png)
 
   - Integer Ranges
 
-  ![](images/8-solidity/solidity3.png)
+  ![](images/8-solidity/solidity-integerRanges.png)
+
+  - Message ('msg') global variable
+    - Available both when a transaction is sent and with a call
+
+    ![](images/8-solidity/solidity-transaction.png)
+
+    ![](images/8-solidity/solidity-call.png)
+
+    - Properties
+
+    ![](images/8-solidity/solidity-properties.png)
 
   - The byte code is the actual byte code that will be deployed to the ethereum network.
   - The ABI is what enables apps to interact with the deployed smart contracts.
 
-  ![](images/8-solidity/solidity4.png)
+  ![](images/8-solidity/solidity-compiler.png)
 
   - The JS code has no ability to interact with the byte code that has been deployed to the ethereum network so need the ABI to do the translation.
 
-  ![](images/8-solidity/solidity5.png)
+  ![](images/8-solidity/ABI.png)
 
 ## 9. Remix
   - remix.ethereum.org
