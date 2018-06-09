@@ -96,13 +96,13 @@
   - Message ('msg') global variable
     - Available both when a transaction is sent and with a call
 
-    ![](images/8-solidity/solidity-transaction.png)
+    ![](images/8-solidity/msg-transaction.png)
 
-    ![](images/8-solidity/solidity-call.png)
+    ![](images/8-solidity/msg-call.png)
 
     - Properties
 
-    ![](images/8-solidity/solidity-properties.png)
+    ![](images/8-solidity/msg-properties.png)
 
   - The byte code is the actual byte code that will be deployed to the ethereum network.
   - The ABI is what enables apps to interact with the deployed smart contracts.
