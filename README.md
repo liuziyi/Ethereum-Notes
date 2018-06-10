@@ -18,6 +18,15 @@
 
   ![](images/2-EN-connection/connecting.png)
 
+  - Traditional Architecture vs Ethereum Architecture
+    - The server in the ethereum architecture can still send a HTML document and some JS assets down to the browser. However, it's role is dramatically diminished.
+    - Whenever a user tries to change some data, it does not reach back out to the server. The server is not at all involved in that process. Instead the ethereum application running inside the browser will make use of web3 which communicates with metamask, metamask creates a transaction signs it with the user's private key and sends that transaction to the ethereum network. (** The only way for a user to change data is through the use of their public and private keys.)
+    - With the ethereum architecture all the responsibility for writing data to some database from the server will be shifted over to the client, which means that the client needs to get a lot more intelligent and a lot more functionality built into it as compared to a traditional architecture.
+
+  ![](images/2-EN-connection/traditional-architecture.png)
+
+  ![](images/2-EN-connection/ethereum-architecture.png)
+
 ## 3. Ethereum Accounts
   - Metamask
     - Each account has three distinct pieces of info: account address, public key and private key. These three pieces of info is what constitutes an account.
