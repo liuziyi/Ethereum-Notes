@@ -133,6 +133,23 @@
 
     ![](images/8-solidity/msg-properties.png)
 
+  - Function modifiers
+    - Helps to reduce the amount of code to write.
+    - It includes use cases such as restricting who has the ability to run a given function.
+    - When the modifier is added to any of the other functions in the contract, the solidity compiler will take all of the code out of that function and add it to the modifier in place of that underscore.
+
+  ```solidity
+  function withdraw() public restricted {
+    ...
+    ...
+  }
+
+  modifier restricted() {
+    require(msg.sender == owner);
+    _;
+  }
+  ```
+
   - The byte code is the actual byte code that will be deployed to the ethereum network.
   - The ABI is what enables apps to interact with the deployed smart contracts.
 
