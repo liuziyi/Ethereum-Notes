@@ -97,13 +97,28 @@
 
   ![](images/8-solidity/solidity-refTypes.png)
 
-    - Arrays (e.g. uint[] public myArray): the function that gets generated for an array in solidity does not return the entire array. It accepts one argument and that's the index of the element that we want to retrieve from the array. To retrieve an entire array:
+    - Arrays (e.g. uint[] public myArray): the function that gets generated for an array in solidity does not return the entire array (to retrieve an entire array need to create a function (below)). It accepts one argument and that's the index of the element that we want to retrieve from the array.
 
     ```solidity
-    address[] public users; 
+    uint[] public numbersArray; 
 
-    function getUsers() public view returns (address[]) {
-      return users;
+    function Numbers() public {
+      numbersArray.push(10);
+      numbersArray.push(100);
+      numbersArray.push(1000);
+    }
+
+    function getArrayLength() public view returns (uint) {
+      return numbersArray.length;
+    }
+
+    function getFirstElement() public view returns (uint) {
+      return numbersArray[0];
+    }
+
+    // To retrieve an entire array
+    function getNumbers() public view returns (uint[]) {
+      return numbersArray;
     }
     ```
 
