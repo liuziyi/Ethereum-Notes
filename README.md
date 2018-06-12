@@ -165,6 +165,42 @@
       ```solidity
       mapping(address => User) users;
       ```
+    - Arrays vs Mappings
+      - Arrays: the search inside of an array is linear which means for every additional record that is added to the array, it's going to take a slightly larger amount of time to execute a search. So if there are 10 records inside of an array it might take 10 seconds to search through and if there are 100 records it might take 100 seconds.
+      - Mappings: no matter how many pieces of data is stored inside a mapping, it's always going to take the exact same amount of time to execute a search. For e.g. it'll only take one second to look up a given user whether there is one user or 10000 users inside the mapping.
+
+      ![](images/8-solidity/ArrayvsMapping.png)
+
+    - JS Objects vs Mappings
+      - Common JS operations
+        1. Can easily retrieve all the keys that a JS object has.
+        2. Can easily retrieve all the different values that the object has.
+        3. Can retrieve a single key using the bracket notation.
+        4. Will get back a value of undefined when accessing a key that does not exist.
+
+      ```javascript
+      const spanishColors = {
+        red: 'rojo',
+        green: 'verde',
+        orange: 'naranja'
+      }
+
+      Object.keys(spanishColors) -> ["red", "green", "orange"]
+      Object.values(spanishColors) -> ["rojo", "verde", "naranja"]
+      spanishColors["red"] -> rojo
+      spanishColors["yellow"] === undefined -> True
+      ```
+      - Mappings
+        1. Cannot get a list of keys. We don't know what keys a mapping has.
+        2. Cannot get a list of all the different values that a mapping has.
+        3. Cannot loop through a mapping and print out all the different values it has. So it's not possible to write a for loop that iterates through all the values.
+        4. All we can do is do a lookup of values e.g. spanishColors["red"].
+        5. Mappings are only good for single value lookups, they're not good for storing information that we want to iterate over sometime in the future.
+        6. All values exist. For e.g. if we put in some value that does not exist (yellow) to the hashing function, we'll get back some index and the index will be looked up inside the mapping. And rather than telling us that there is no value at that particular index, it'll return some default value for that element. The default value that we get back from mappings depends on the value type of the values inside of the mapping e.g. a empty string if the values were strings. This makes it hard to know whether or not a value exists.
+
+        ![](images/8-solidity/mappings-keys.png)
+
+        ![](images/8-solidity/mappings-values.png)
 
   - Message ('msg') global variable
     - Available both when a transaction is sent and with a call
@@ -194,7 +230,7 @@
   }
   ```
   - Storage vs Memory
-      
+
   ![](images/8-solidity/StoragevsMemory1.png)
 
   ![](images/8-solidity/StoragevsMemory2.png)
