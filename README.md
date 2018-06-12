@@ -144,6 +144,8 @@
       }
       ```
       - Instance creation syntax
+        - Every field of the struct has to be initialized everytime an instance of a struct is created. 
+        - When we initialize properties of a struct, we only have to initialize the value types. There's no need to add any code to initialize a reference type e.g a mapping.
 
       ![](images/8-solidity/struct-instance.png)
 
