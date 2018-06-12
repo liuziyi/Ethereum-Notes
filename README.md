@@ -193,6 +193,11 @@
     _;
   }
   ```
+  - Storage vs Memory
+      
+  ![](images/8-solidity/StoragevsMemory1.png)
+
+  ![](images/8-solidity/StoragevsMemory2.png)
 
   - The byte code is the actual byte code that will be deployed to the ethereum network.
   - The ABI is what enables apps to interact with the deployed smart contracts.
