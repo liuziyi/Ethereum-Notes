@@ -21,7 +21,7 @@
   - Traditional Architecture vs Ethereum Architecture
     - The server in the ethereum architecture can still send a HTML document and some JS assets down to the browser. However, it's role is dramatically diminished.
     - Whenever a user tries to change some data, it does not reach back out to the server. The server is not at all involved in that process. Instead the ethereum application running inside the browser will make use of web3 which communicates with metamask, metamask creates a transaction signs it with the user's private key and sends that transaction to the ethereum network. (** The only way for a user to change data is through the use of their public and private keys.)
-    - With the ethereum architecture all the responsibility for writing data to some database from the server will be shifted over to the client, which means that the client needs to get a lot more intelligent and a lot more functionality built into it as compared to a traditional architecture.
+    - With the ethereum architecture all the responsibility for writing data to some database from the server will be shifted over to the client, which means that the client needs to be a lot more intelligent and have a lot more functionality built into it as compared to a traditional architecture.
 
   ![](images/2-EN-connection/traditional-architecture.png)
 
@@ -130,6 +130,41 @@
       return numbersArray;
     }
     ```
+    - Struct
+      - A custom type that you can define similar to address, uint, string, etc. You can define the struct with a name and associated properties inside of it.
+      - It's very similar to a class and if we want to make use of it we have to first create an instance of it.
+      - Models some given individual object e.g a struct that represents a user, which will store their age, first and last name.
+      - Can reference each user by their ethereum address, which can be done by creating a mapping
+
+      ```solidity
+      struct User {
+        uint age;
+        string fName;
+        string lName;
+      }
+      ```
+      - Instance creation syntax
+
+      ![](images/8-solidity/struct-instance.png)
+
+      ```solidity
+      function createUser(uint age, string fName, string, lName) public {
+        User newUser = User({
+          age: age,
+          fName: fName,
+          lName: lName
+        });
+      }
+      ```
+
+    - Mapping
+      - A hash table, which consists of key types and value type pairs.
+      - It can be defined like any other variable type.
+      - The mapping below is referred to as users, which has a key of type address and the value type is a Struct that was created above.
+
+      ```solidity
+      mapping(address => User) users;
+      ```
 
   - Message ('msg') global variable
     - Available both when a transaction is sent and with a call
